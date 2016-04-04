@@ -5,7 +5,8 @@
 	$postData = array(
 	    'firstName' => $_POST['firstName'],
 	    'lastName' => $_POST['lastName'],
-	    'email' => $_POST['email']
+	    'email' => $_POST['email'],
+	    'password' => $_POST['password']
 	);
 
 	$curl = curl_init();
@@ -31,9 +32,10 @@
 	curl_close($curl);
 
 	if($httpStatus == 201){
-		// redirect to profile
+		echo $response;
 	}
 	else {
-		// There was an error
+		echo $httpStatus;
+		echo $response;
 	}
 ?>
