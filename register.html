@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Register</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div id="sign-up-form">
+					<h2>Sign up</h2>
+					<p id="have-account">
+						Have an account? <a href="login"> Sign in. </a>
+					</p>
+					<form action="php/register.php" method="post">
+						<!-- Email -->
+						<input class="input-box" data-validate="required,email" placeholder="Email" name="email" />
+
+						<!-- First Name -->
+						<input class="input-box" data-validate="required" placeholder="First Name" name="firstName" />
+						
+						<!-- Last Name -->
+						<input class="input-box" data-validate="required" placeholder="Last Name" name="lastName"/>
+
+						<!-- Password -->
+						<input type="password" class="input-box" data-validate="required,min(6)" placeholder="Password" name="password" />
+						<p class="form-info" id="password-info">Must be at least 6 characters long</p>
+
+						<!-- Sign up button -->
+						<input class="button" id="sign-up-btn" type="submit" value="Get started!">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="jquery/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/verify.notify.min.js"></script>
+	<script src="js/notify-config.js"></script>
+</body>
+</html>
